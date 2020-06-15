@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<modification
+		xmlns="https://github.com/vqmod/vqmod"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="https://github.com/vqmod/vqmod https://raw.githubusercontent.com/vqmod/vqmod/master/vqmod.xsd">
+		>
+			<id><![CDATA[[VQMOD] Journal 2 - Advanced Opencart Theme: Load custom_stylesheet.css file for overrides]]></id>
+			<version>1.1</version>
+			<vqmver>2.6.1</vqmver>
+			<author>kanenas.net (aka Nikolas Branis) - nbran@kanenas.net</author>
+			<file name="catalog/controller/journal2/settings.php" error="log">
+				<operation error="skip">
+					<search position="before"><![CDATA[// add other plugins]]></search>
+					<add><![CDATA[
+        // Load custom_stylesheet.css file for overrides 
+        $this->journal2->minifier->addStyle('catalog/view/theme/journal2/css/custom_stylesheet.css');
+					]]></add>
+				</operation>
+			</file>
+			<file name="catalog/view/theme/journal2/template/journal2/quickview/quickview.tpl" error="log">
+				<operation error="skip">
+					<search position="before"><![CDATA[<?php echo $this->journal2->minifier->css(); ?>]]></search>
+					<add><![CDATA[<?php $this->journal2->minifier->addStyle('catalog/view/theme/journal2/css/custom_stylesheet.css'); ?>]]></add>
+				</operation>
+			</file>
+	</modification>
