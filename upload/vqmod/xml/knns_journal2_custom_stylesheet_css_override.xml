@@ -5,7 +5,7 @@
 		xsi:schemaLocation="https://github.com/vqmod/vqmod https://raw.githubusercontent.com/vqmod/vqmod/master/vqmod.xsd">
 		>
 			<id><![CDATA[[VQMOD] Journal 2 - Advanced Opencart Theme: Load custom_stylesheet.css file for overrides]]></id>
-			<version>1.1</version>
+			<version>1.1.0</version>
 			<vqmver>2.6.1</vqmver>
 			<author>kanenas.net (aka Nikolas Branis) - nbran@kanenas.net</author>
 			<file name="catalog/controller/journal2/settings.php" error="log">
